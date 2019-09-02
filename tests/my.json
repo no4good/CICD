@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "b3e46e7b-29f3-4d63-935b-56d16fa8d818",
+		"name": "Task7 - REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Получить список пользователей(users)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создать нового пользователя",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 11,\n        \"name\": \"Denys K\",\n        \"username\": \"Now\",\n        \"email\": \"123@gmail.com\",\n        \"address\": {\n            \"street\": \"Kievskaya\",\n            \"suite\": \"Suite 322\",\n            \"city\": \"Kiev\",\n            \"zipcode\": \"1545858\",\n            \"geo\": {\n                \"lat\": \"-25\",\n                \"lng\": \"63\"\n            }\n        },\n        \"addressJJ\": \"rtq\",\n        \"phone\": \"qweqweqwe\",\n        \"website\": \"mok.mok\",\n        \"company\": {\n            \"name\": \"GabeN\",\n            \"catchPhrase\": \"No\",\n            \"bs\": \"Dota2-player\"\n        }\n    }"
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить данные пользователя “Kurtis Weissnat”",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users?name=Kurtis Weissnat",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Kurtis Weissnat"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменить адрес пользователя “Kurtis Weissnat”",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"address\": {\r\n        \"street\": \"Pushkina\",\r\n        \"suite\": \"Kolotyshkina 22\",\r\n        \"city\": \"Francia\",\r\n        \"zipcode\": \"555-05-55\",\r\n        \"geo\": {\r\n            \"lat\": \"66.998\",\r\n            \"lng\": \"66.998\"\r\n        }\r\n    },\r\n    \"addressJJ\": \"rtq\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users/7",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление пользователя",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users/5",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Найти пользователя с имейлом “email” : “Karley_Dach@jasper.info”",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users?email=Karley_Dach@jasper.info",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "Karley_Dach@jasper.info"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отобразить список постов пользователей(posts)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Показать все посты пользователя “Kurtis Weissnat” (используя его id)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts?userId=7",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
