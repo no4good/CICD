@@ -3,12 +3,11 @@ node_js:
   - "8.2.1"
 
 install:
-  - npm install newman
+  - npm install
 
 before_script:
   - node --version
   - npm --version
-  - node_modules/.bin/newman --version
 
 script:
   - node_modules/.bin/newman run tests/my.json
