@@ -1,17 +1,29 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
+  "name": "CICD",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "start": "nodejs ./bin/www"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/no4good/CICD.git"
+  },
   "dependencies": {
-    "express": "~4.0.0",
-    "static-favicon": "~1.0.0",
-    "morgan": "~1.0.0",
-    "cookie-parser": "~1.0.1",
-    "body-parser": "~1.0.0",
-    "debug": "~0.7.4",
-    "jade": "~1.3.0"
-  }
+    "express": "4.17.1",
+    "static-favicon": "2.0.0-alpha",
+    "morgan": "1.9.1",
+    "cookie-parser": "1.4.4",
+    "body-parser": "1.19.0",
+    "debug": "4.1.1",
+    "jade": "1.11.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/no4good/CICD/issues"
+  },
+  "homepage": "https://github.com/no4good/CICD#readme"
 }

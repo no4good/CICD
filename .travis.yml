@@ -11,6 +11,6 @@ before_script:
   
 
 script:
-  - docker build . -t no4good597/apps:v1
+  - docker build . -t no4good597/apps:v2
   - docker login -u $SECRET_CLOUD_LOGIN -p $SECRET_CLOUD_PASS
-  - docker push no4good597/apps:v1
+  - docker push no4good597/apps:v2
