@@ -1,18 +1,16 @@
 language: node_js
 node_js:
-  - "8.2.1"
-
+  - "10.15.3"
+services: 
+  - docker 
 install:
   - npm install
-
 before_script:
   - node --version
   - npm --version
+  
 
 script:
-  - node_modules/.bin/newman run tests/my.json
-
-deploy:
-  provider: heroku
-  api_key: $MY_SECRET_ENV
-  app: testnfg
+  - docker build . -t no4good597/apps:v1
+  - docker login -u $SECRET_CLOUD_LOGIN -p $SECRET_CLOUD_PASS
+  - docker push no4good597/apps:v1
